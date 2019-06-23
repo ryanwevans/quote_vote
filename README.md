@@ -1,86 +1,28 @@
-# Redux Put It Together
+# Quote Vote
 
-## Objectives
+ React/Redux lab by Ryan Evans for Flatiron School
 
-Use the react-redux library and the redux library to build an application with
-multiple resources.
+##Lab Objectives
+Use the react-redux library and the redux library to build an application with multiple resources.
 
-## Overview
+##Lab Overview
+In this lab we will be building an application for making quotes. This will include creating a quote and updating the global Redux state.
 
-In this lab we will be building an application for making quotes. This will
-include creating a quote and updating the global Redux state.
 
-In our `App` component we will render the components: `QuoteForm` & `Quotes`. We
-will also need a reducer and actions file for our Quotes.
+## Usage
 
-### Quotes Reducer
+*This lab is a portfolio copy for presentation only*
+- After cloning this repo, cd into the project directory, then run `bundle` to install dependencies
+- Run `npm install`
+- To run tests, run `npm test`
+- You can start the application by running `npm start` from the project directory. This will automatically open the app in a browser window
 
-The quotes reducer should have an initial state of:
 
-```javascript
-[]
-```
+## Contributing
 
-But when a Quote is added it should look like. (We will be using the `uuid` node
-package for generating ids)
+Bug reports and pull requests are welcome on GitHub at https://github.com/ryanwevans/quote_vote. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
-```javascript
-[
-  {
-    id: '23423424242-42342423424242-fafdb',
-    content: 'One Awesome Quote',
-    author: 'Luke Ghenco'
-  }
-]
-```
 
-We will also need to extend out the Quotes Reducer to handle removing quotes,
-upvoting quotes, and downvoting quotes as well. Check out the test specs for how
-to build these.
+## License
 
-### Quotes Actions
-
-Build out several actions as specified in the tests that build Action Creators
-for add, removing, upvoting and downvoting quotes.
-    
-### QuoteForm Component
-
-Our Quote form will have a textarea for a quotes content and an input for a
-quotes author. We will be using component state for updating the inputs so make
-sure to have a state of `{ content: '', author: '' }` in your `QuoteForm`
-constructor. You will make a dispatch action to Redux using an action you will
-create called `addQuote()` that will take a quote as an argument and start the
-reducer process.
-
-### Quotes Component
-
-The `Quotes` Component will render a list of individual `QuoteCard` components.
-It needs to be connected to the `Redux` state so that it can render the quotes.
-Also make sure to attach the remove, upvote, and downvote actions from the
-Quotes Actions file to pass down as callback props to the `QuoteCard` component.
-
-### QuoteCard Component
-
-Make sure to connect the callback action props to the the Upvote, Downvote and
-Delete buttons.
-
-#### Example App
-
-Here is an image of the example app, of what you are trying to build.
-
-![](https://s3-us-west-2.amazonaws.com/curriculum-content/web-development/react/quote-app-image.png)
-
-#### Note
-
-We are using the `Node UUID` package for this to create random unique ids. Here
-is the documentation for [Node UUID](https://github.com/kelektiv/node-uuid). To
-use it just import it into your reducer and invoke it
-
-```javascript
-import uuid from 'uuid';
-
-const id = uuid();
-console.log(id) // '1fd3234'
-```
-
-<p class='util--hide'>View <a href='https://learn.co/lessons/cooking-with-redux'>Cooking With Redux</a> on Learn.co and start learning to code for free.</p>
+The app is available as open source under the terms of the **MIT License** (http://opensource.org/licenses/MIT).
