@@ -33,13 +33,13 @@ class QuoteForm extends Component {
     return (
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-8 col-md-offset-8">
+          <div className="col-md-12 col-md-offset-2">
             <div className="panel panel-default">
               <div className="panel-body">
                 <form className="form-horizontal" onSubmit={this.handleOnSubmit}>
                   <div className="form-group">
                     <label htmlFor="content" className="col-md-4 control-label">Quote</label>
-                    <div className="col-md-4">
+                    <div className="col-md-6">
                       <textarea
                         className="form-control"
                         name="content"
@@ -62,7 +62,7 @@ class QuoteForm extends Component {
                   </div>
                   <div className="form-group">
                     <div className="col-md-6 col-md-offset-4">
-                      <button type="submit" className="btn btn-default">Add</button>
+                      <button type="submit" className="btn btn-sm btn-outline-secondary" id="add_quote_button">Add</button>
                     </div>
                   </div>
                 </form>

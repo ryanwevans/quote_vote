@@ -2,10 +2,10 @@
 
  React/Redux lab by Ryan Evans for Flatiron School
 
-##Lab Objectives
+## Lab Objectives
 Use the react-redux library and the redux library to build an application with multiple resources.
 
-##Lab Overview
+## Lab Overview
 In this lab we will be building an application for making quotes. This will include creating a quote and updating the global Redux state.
 
 
