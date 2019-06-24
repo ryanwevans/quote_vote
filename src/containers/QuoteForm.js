@@ -5,12 +5,14 @@ import { addQuote } from '../actions/quotes';
 
 class QuoteForm extends Component {
 
+// Local state only, used to hold state that will be passed to global state in #handleOnSubmit
   state = {
       content: '',
       author: '',
       votes: 0
     }
 
+// Updates local state as user types into text field; text field's value is set to the value of local state, so text field is updated as the user types.
   handleOnChange = event => {
     const { value, name } = event.target
     this.setState({
@@ -18,11 +20,12 @@ class QuoteForm extends Component {
     });
   }
 
+// Handles form submission and addition of quote to global store (Redux) when user clicks `submit`
   handleOnSubmit = event => {
     event.preventDefault();
     const quote = {...this.state, id: uuid() };
-    // console.log(quote)
     this.props.addQuote(quote);
+    // Reset the local state to empty:
     this.setState({
       content: '',
       author: ''
@@ -75,5 +78,4 @@ class QuoteForm extends Component {
   }
 }
 
-//add arguments to connect as needed
 export default connect(null, { addQuote })(QuoteForm);

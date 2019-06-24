@@ -13,6 +13,7 @@ class Quotes extends Component {
         <div className="row justify-content-center">
           <h2>Quotes</h2>
         </div>
+        {/* Iterate over all quotes, creating and displaying a QuoteCard for each */}
         {quotes.map( quote => <QuoteCard key={quote.id} quote={quote} removeQuote={removeQuote} upvoteQuote={upvoteQuote} downvoteQuote={downvoteQuote} /> )}
       </div>
     );
