@@ -46,6 +46,7 @@ class QuoteForm extends Component {
                       <textarea
                         className="form-control"
                         name="content"
+                        autoFocus
                         onChange={(event) => this.handleOnChange(event)}
                         value={this.state.content}
                       />
